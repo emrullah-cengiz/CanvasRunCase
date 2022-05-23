@@ -42,10 +42,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 6376833524618879234}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45a05ecc2c76cd345b3c2d4686b6fb48, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b6e989290730d040a67568d2bfb5a2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frontBall: {fileID: 0}
   mesh: {fileID: 6376833525359961096}
 --- !u!1 &6376833525359961096
 GameObject:

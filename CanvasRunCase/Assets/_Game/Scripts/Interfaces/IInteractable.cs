@@ -5,6 +5,9 @@ namespace Assets._Game.Scripts.Interfaces
 {
     public interface IInteractable
     {
-        public void OnInteracted();
+        bool IsInteracted { get; set; }
+        bool IsEnabled { get; set; }
+
+        void OnInteracted();
     }
 }

@@ -27,7 +27,7 @@ public class MovementController : Singleton<MovementController>
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.TryGetComponent(out IInteractable interactable))
+        if (other.TryGetComponent(out IInteractableWithPlayer interactable))
             interactable.OnInteracted();
     }
 

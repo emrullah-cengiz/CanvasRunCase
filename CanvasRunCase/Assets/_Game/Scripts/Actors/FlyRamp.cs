@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [ExecuteAlways]
-public class FlyRamp : MonoBehaviour, IInteractable
+public class FlyRamp : MonoBehaviour, IInteractableWithPlayer
 {
     public float FlyAngle = 45f;
 

@@ -1,4 +1,5 @@
 using Assets.Scripts;
+using Cinemachine;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -17,6 +18,7 @@ public class GameManager : Singleton<GameManager>
     [HideInInspector] public List<Ball> BallsToScheculedRemove = new();
 
     public LayerMask moundLayer;
+    public CinemachineVirtualCamera vmCam;
     public float ballsMinDistanceForReposition = .25f;
     public float repositionSpeed;
     public float maxTimeThresholdForReposition;

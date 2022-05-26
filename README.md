@@ -1,6 +1,6 @@
 # CanvasRunCase
 
-It's a "Canvas Run" simple mechanic work for the Fİber Games study case. 
+It's a "Canvas Run" simple mechanic work for the Fiber Games study case. 
 
 - Number of balls can be adjusted from "GameInitializer" component on "GameManager" object.
 

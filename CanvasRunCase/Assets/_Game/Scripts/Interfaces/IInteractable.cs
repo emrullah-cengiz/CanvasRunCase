@@ -8,6 +8,6 @@ namespace Assets._Game.Scripts.Interfaces
         bool IsInteracted { get; set; }
         bool IsEnabled { get; set; }
 
-        void OnInteracted(Ball ball = null);
+        void OnInteracted(Ball ball);
     }
 }

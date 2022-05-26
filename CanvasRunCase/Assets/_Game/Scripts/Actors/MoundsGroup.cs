@@ -9,6 +9,11 @@ public class MoundsGroup : MonoBehaviour, IInteractableWithPlayer
     public bool IsInteracted { get; set; }
     public bool IsEnabled { get; set; } = true;
 
+    public void OnExit()
+    {
+
+    }
+
     public void OnInteracted()
     {
         if (!IsEnabled)

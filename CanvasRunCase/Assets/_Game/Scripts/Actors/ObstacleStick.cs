@@ -8,13 +8,8 @@ public class ObstacleStick : MonoBehaviour, IInteractable
     public bool IsInteracted { get; set; }
     public bool IsEnabled { get; set; } = true;
 
-    public void OnInteracted(Ball ball = null)
+    public void OnInteracted(Ball ball)
     {
-        if (ball == null)
-            return;
-
-        //GameManager.Instance.BallGroups[ball.groupIndex].Remove(ball);
-
         GameManager.Instance.BallsToScheculedRemove.Add(ball);
 
         StartCoroutine(GameManager.Instance.RetarderTimerForGroup(ball.groupIndex));
@@ -22,6 +17,5 @@ public class ObstacleStick : MonoBehaviour, IInteractable
         ball.enabled = false;
 
         ball.mesh.SetActive(false);
-
     }
 }

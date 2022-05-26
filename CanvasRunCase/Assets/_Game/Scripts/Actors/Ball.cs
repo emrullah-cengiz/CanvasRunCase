@@ -17,9 +17,4 @@ public class Ball : MonoBehaviour
             interactable.OnInteracted(this);
     }
 
-    public void Destroy()
-    {
-        gameObject.SetActive(false);
-    }
-
 }

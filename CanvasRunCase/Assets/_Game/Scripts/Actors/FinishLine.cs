@@ -8,19 +8,16 @@ public class FinishLine : MonoBehaviour, IInteractable, IInteractableWithPlayer
     public bool IsInteracted { get; set; }
     public bool IsEnabled { get; set; } = true;
 
-    public void OnInteracted(Ball ball = null)
+    public void OnExit()
     {
-        print("int");
+    }
 
-        if (ball == null)
-            return;
-
+    public void OnInteracted(Ball ball)
+    {
         ball.rigidBody.useGravity = true;
         ball.collider.isTrigger = false;
 
         GameManager.Instance.BallGroups[ball.groupIndex].Remove(ball);
-
-        //Instantiate(new GameObject("DEBUG"), ball.transform.position - new Vector3(0, 0, .02f), Quaternion.identity);
 
         ball.rigidBody.AddExplosionForce(Random.Range(100, 300), ball.transform.position + new Vector3(0, -.1f, -.2f), Random.Range(.3f, .5f));
     }
@@ -28,6 +25,7 @@ public class FinishLine : MonoBehaviour, IInteractable, IInteractableWithPlayer
     public void OnInteracted()
     {
         GameManager.Instance.vmCam.Follow = null;
+        GameManager.Instance.vmCam.LookAt = null;
         MovementController.Instance.MovementSpeed /= 5;
     }
 }

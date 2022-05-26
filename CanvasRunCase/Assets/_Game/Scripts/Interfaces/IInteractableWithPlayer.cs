@@ -9,5 +9,6 @@ namespace Assets._Game.Scripts.Interfaces
         bool IsEnabled { get; set; }
 
         void OnInteracted();
+        void OnExit();
     }
 }

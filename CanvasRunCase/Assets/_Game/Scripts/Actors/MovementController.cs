@@ -31,6 +31,12 @@ public class MovementController : Singleton<MovementController>
             interactable.OnInteracted();
     }
 
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.TryGetComponent(out IInteractableWithPlayer interactable))
+            interactable.OnExit();
+    }
+
     void Update()
     {
         CalculateHorizontalDelta();
@@ -117,7 +123,6 @@ public class MovementController : Singleton<MovementController>
 
     private void FlyAndResetXAngleSmoothly()
     {
-        //Quaternion startRotation = Quaternion.Euler(flyRampAngle, transform.eulerAngles.y, 0);
         Quaternion targetRotation = Quaternion.Euler(flyRampAngle + 90, transform.eulerAngles.y, 0);
 
         transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRotation, 20 * Time.deltaTime);

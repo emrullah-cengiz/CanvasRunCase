@@ -97,4 +97,5 @@ public class GameManager : Singleton<GameManager>
     }
 
     public void StartTheInclinationCheck() => checkForInclination = true;
+    public void StopTheInclinationCheck() => checkForInclination = true;
 }
